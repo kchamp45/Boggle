@@ -43,12 +43,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if(view == mSubmitButton) {
             String userInputWord = mWordEditText.getText().toString();
-            userAnswers.add(userInputWord);
+            checkUserInput(userInputWord);
+
         } else if(view == mShowListButton){
             Intent intent = new Intent(MainActivity.this, WordActivity.class);
             intent.putStringArrayListExtra("words", userAnswers);
             startActivity(intent);
         }
+    }
 
+    private void checkUserInput(String word) {
+        if(word.length() < 3 || word.length() > 8) {
+            mWordEditText.setError("Enter at least 3 characters");
+        } else {
+            userAnswers.add(word);
+            mWordEditText.getText().clear();
+        }
     }
 }

@@ -46,7 +46,9 @@ public class LettersAdapter extends BaseAdapter {
 
         View gridView;
 
-        ArrayList<String> lettersList = selectLetters(2, 6);
+
+        int[] numArray = selectNumbersSumToEight();
+        ArrayList<String> lettersList = selectLetters(numArray[0], numArray[1]);
 
         if(convertView == null) {
             gridView = inflater.inflate(R.layout.letter_activity, null);
@@ -74,4 +76,17 @@ public class LettersAdapter extends BaseAdapter {
         }
         return letters;
     }
+
+    private int[] selectNumbersSumToEight() {
+        int[] returnArray = new int[2];
+        int[] numOne = {2, 3, 4, 5, 6, 7, 8};
+        int[] numTwo = {6, 5, 4, 3, 2, 1, 0};
+
+        int randomNumber = (int) Math.floor(Math.random() * 7);
+        returnArray[0] = numOne[randomNumber];
+        returnArray[1] = numTwo[randomNumber];
+        return returnArray;
+
+    }
+
 }
