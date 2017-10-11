@@ -46,7 +46,6 @@ public class LettersAdapter extends BaseAdapter {
 
         View gridView;
 
-
         int[] numArray = selectNumbersSumToEight();
         ArrayList<String> lettersList = selectLetters(numArray[0], numArray[1]);
 
@@ -86,7 +85,5 @@ public class LettersAdapter extends BaseAdapter {
         returnArray[0] = numOne[randomNumber];
         returnArray[1] = numTwo[randomNumber];
         return returnArray;
-
     }
-
 }

@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if(view == mShowListButton){
             Intent intent = new Intent(MainActivity.this, WordActivity.class);
             intent.putStringArrayListExtra("words", userAnswers);
-            startActivity(intent);
+            startActivityForResult(intent, 1);
         }
     }
 
