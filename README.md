@@ -24,17 +24,17 @@ JAVA and Android Studios.
 
 ## User Stories:
 
-* I want to see at least 8 random letters.
+* I want to see at least 8 random letters on a grid layout.
 * I want to see that at least 2 of the 8 random letters are vowels.
 * I want to enter a word that contains at least 3 of those random letters.
-* I want to my words to be displayed at the end of the round.
+* I want my words to be displayed at the end of the round.
 
 ## Specs
 
 | Behavior  | Input | Output |
 | ------------- |:-------------:| -----|
-| given a choice of 8 random letters | open the app| --- |
-| add word using at least 3 letters | enter said word |
+| given a choice of 8 random letters | open the app| presented with 8 said letters |
+| add word using at least 3 letters | enter said word | word either accepted or rejected|
 | display the words | "submit"| accepted words are displayed|
 
 ### License
